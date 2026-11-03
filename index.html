@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0f1012">
+  <meta name="description" content="Miguel Franco — tecnologia, inteligência artificial, programação e automobilismo.">
+  <title>Miguel Franco — Perfil pessoal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="site/_runtime/file-fonts.css">
+  <link rel="stylesheet" href="site/_runtime/style-0.css">
+  <link rel="stylesheet" href="site/cdn.prod.website-files.com/67b5a02dc5d338960b17a7e9/css/lando-offbrand.shared.6e09a725a.css">
+  <link rel="stylesheet" href="site/_runtime/style-1.css">
+  <link rel="stylesheet" href="site/_runtime/style-2.css">
+  <link rel="stylesheet" href="site/_runtime/style-3.css">
+  <style>
+    :root{
+      --bg:#0f1012;
+      --panel:#17181c;
+      --panel2:#202227;
+      --lime:#d5ff35;
+      --red:#ff3344;
+      --red-glow:rgba(255,51,68,.35);
+      --cream:#f1f0e9;
+      --muted:#a7ada0;
+      --line:rgba(241,240,233,.14);
+      --font:"Mona Sans Variable","Mona Sans",Arial,Helvetica,sans-serif;
+      --display:Brier,"Arial Black",Arial,sans-serif
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;background:var(--bg)}
+    body{margin:0;background:var(--bg);color:var(--cream);font-family:var(--font);-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+    button{font:inherit}
+    .site-shell{overflow:hidden}
+    .container{width:min(1220px,calc(100% - 64px));margin:auto}
+    .topbar{height:88px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);position:relative;z-index:20}
+    .brand{display:flex;align-items:center;gap:12px;font-size:14px;font-weight:900;letter-spacing:.08em}
+    .brand-mark{width:34px;height:34px;border:1px solid var(--red);border-radius:50%;display:grid;place-items:center;color:var(--red);font-size:12px;box-shadow:0 0 10px var(--red-glow)}
+    .brand-logo{display:block;width:54px;height:50px;object-fit:contain;filter:drop-shadow(0 0 7px rgba(213,255,53,.22));transition:transform .35s ease,filter .35s ease}
+    .brand:hover .brand-logo{transform:scale(1.07) rotate(-2deg);filter:drop-shadow(0 0 11px rgba(213,255,53,.42))}
+    @media(max-width:700px){.brand-logo{width:46px;height:43px}}
+    .nav{display:flex;gap:34px;align-items:center}
+    .nav a{font-size:11px;text-transform:uppercase;letter-spacing:.14em;color:#c7cbbf;transition:color .2s}
+    .nav a:hover{color:var(--lime)}
+    .nav-cta{border:1px solid var(--red);padding:13px 18px;color:var(--red)!important;transition:all .2s}
+    .nav-cta:hover{background:var(--red);color:#fff!important;box-shadow:0 0 15px var(--red-glow)}
+    .menu-toggle{display:none;background:none;color:var(--cream);border:1px solid var(--line);padding:10px 13px}
+    
+    .hero{min-height:690px;display:grid;grid-template-columns:1.03fr .97fr;align-items:center;position:relative;padding:54px 0 76px}
+    .hero:before{content:"";position:absolute;width:580px;height:580px;border-radius:50%;background:radial-gradient(circle,rgba(255,51,68,.14),rgba(213,255,53,0.06) 50%,transparent 70%);right:8%;top:7%;pointer-events:none}
+    .eyebrow{display:flex;align-items:center;gap:12px;color:var(--red);font-size:10px;font-weight:800;letter-spacing:.22em;text-transform:uppercase}
+    .eyebrow:before{content:"";width:28px;height:1px;background:var(--red)}
+    .hero h1{font-family:var(--display);font-size:clamp(64px,9.5vw,132px);line-height:.82;letter-spacing:-.075em;margin:27px 0 24px;text-transform:uppercase;position:relative;z-index:2}
+    .hero h1 span{display:block;color:var(--lime)}
+    .hero-copy{max-width:490px;font-size:16px;line-height:1.7;color:#c1c7ba}
+    .hero-meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+    .meta-pill{border:1px solid var(--line);border-radius:999px;padding:10px 14px;color:#d9ddcf;font-size:11px;letter-spacing:.06em}
+    .meta-pill strong{color:var(--lime);font-weight:700}
+    .meta-pill strong.highlight-red{color:var(--red)}
+    .hero-actions{display:flex;gap:12px;margin-top:34px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 21px;background:var(--lime);color:#11150d;font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.12em;transition:transform .2s,background .2s}
+    .btn:hover{transform:translateY(-3px);background:#e4ff80}
+    .btn-red{background:var(--red);color:#fff}
+    .btn-red:hover{background:#ff4d5e;box-shadow:0 0 15px var(--red-glow)}
+    .btn-ghost{border:1px solid var(--line);background:transparent;color:var(--cream)}
+    .btn-ghost:hover{background:var(--panel2)}
+    
+    .hero-visual{height:570px;position:relative;display:flex;align-items:flex-end;justify-content:center;isolation:isolate;perspective:900px}
+    .hero-visual:after{content:"";position:absolute;width:72%;height:18%;left:14%;bottom:3%;border-radius:50%;background:rgba(213,255,53,.13);filter:blur(34px);z-index:0;animation:portraitGlow 5s ease-in-out infinite}
+    .hero-orbit{position:absolute;width:min(90%,480px);aspect-ratio:1;border:1px solid rgba(255,51,68,.3);border-radius:50%;top:8%;left:8%;z-index:-1;animation:orbitPulse 7s ease-in-out infinite}
+    .hero-orbit:before,.hero-orbit:after{content:"";position:absolute;border:1px solid rgba(213,255,53,.2);border-radius:50%;inset:8%}
+    .hero-orbit:after{inset:18%;border-color:rgba(255,51,68,.15)}
+    .portrait-reveal{height:100%;max-height:590px;width:100%;aspect-ratio:1084/1451;position:relative;z-index:2;cursor:crosshair;touch-action:pan-y;outline:none;isolation:isolate;animation:portraitFloat 6s ease-in-out infinite;transform-origin:50% 85%}
+    .portrait-reveal:focus-visible{outline:2px solid var(--lime);outline-offset:7px}
+    .portrait{position:absolute;inset:0;width:100%;height:100%;max-height:none;max-width:none;object-fit:contain;object-position:center bottom;pointer-events:none}
+    
+    /* Foto de fundo borrada por padrão */
+    .portrait-blurred{
+      filter: blur(5px) brightness(.76) saturate(.82);
+      transform: scale(1.025);
+      transition: filter .45s ease, opacity .45s ease, transform .7s ease;
+      opacity: 1;
+    }
+    
+    /* Foto nítida revelada dinamicamente pelo movimento da máscara no hover/touch */
+    .portrait-sharp{
+      filter: drop-shadow(0 22px 42px rgba(0,0,0,.42)) brightness(1.08) saturate(1.08);
+      opacity: 0;
+      transition: opacity .35s ease;
+      -webkit-mask-image: radial-gradient(circle 178px at var(--reveal-x, 50%) var(--reveal-y, 50%), #000 0%, rgba(0,0,0,.98) 62%, transparent 100%);
+      mask-image: radial-gradient(circle 178px at var(--reveal-x, 50%) var(--reveal-y, 50%), #000 0%, rgba(0,0,0,.98) 62%, transparent 100%);
+    }
+    
+    .portrait-reveal.is-active .portrait-sharp{
+      opacity: 1;
+    }
+
+    .portrait-reveal.is-active .portrait-blurred{
+      filter: blur(9px) brightness(.48) saturate(.58);
+      transform: scale(1.045);
+    }
+    .portrait-reveal.is-active{animation-play-state:paused}
+    .portrait-reveal.is-active .portrait-sharp{filter:drop-shadow(0 22px 48px rgba(213,255,53,.18)) brightness(1.12) saturate(1.12)}
+
+    .portrait-code-canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible;z-index:3}
+    .portrait-hint{position:absolute;right:0;top:calc(4% + 500px);z-index:4;color:rgba(238,241,225,.58);font-size:8px;letter-spacing:.13em;text-transform:uppercase;white-space:nowrap;pointer-events:none;transition:color .2s}
+    .portrait-reveal.is-active~.portrait-hint{color:var(--lime)}
+    .visual-tag{position:absolute;left:1%;bottom:12%;z-index:4;border:1px solid var(--red);background:rgba(15,16,18,.9);padding:13px 16px;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--cream);box-shadow:0 0 12px var(--red-glow)}
+    .visual-tag small{display:block;color:var(--red);font-size:9px;margin-top:5px;letter-spacing:.1em;font-weight:700}
+    .scroll-note{position:absolute;bottom:18px;left:0;color:#899184;font-size:9px;letter-spacing:.2em;text-transform:uppercase;display:flex;align-items:center;gap:12px}
+    .scroll-note:before{content:"";height:1px;width:34px;background:var(--red)}
+    
+    .ticker{background:var(--red);color:#fff;overflow:hidden;white-space:nowrap;padding:17px 0;font-family:var(--display);font-size:16px;letter-spacing:.12em;box-shadow:inset 0 0 10px rgba(0,0,0,.3)}
+    .ticker-track{display:flex;gap:42px;width:max-content;animation:marquee 28s linear infinite}
+    .ticker span:after{content:"✳";padding-left:42px;color:var(--lime)}
+    
+    section.content-section{padding:112px 0;border-bottom:1px solid var(--line)}
+    .section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:48px}
+    .section-kicker{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--red);margin-bottom:16px;font-weight:700}
+    .section-title{font-family:var(--display);font-size:clamp(42px,6vw,76px);line-height:.9;letter-spacing:-.06em;text-transform:uppercase;margin:0}
+    .section-title span{color:var(--lime)}
+    .section-intro{max-width:390px;color:var(--muted);font-size:14px;line-height:1.7;margin:0}
+    .about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:22px}
+    .about-card{background:var(--panel);padding:36px;min-height:260px;border:1px solid var(--line);position:relative;overflow:hidden}
+    .about-card h3{font-family:var(--display);font-size:30px;letter-spacing:-.04em;margin:0 0 18px}
+    .about-card p{color:var(--muted);line-height:1.8;font-size:14px;max-width:570px;margin:0}
+    .about-card .number{position:absolute;right:25px;bottom:-25px;font-family:var(--display);font-size:150px;line-height:1;color:rgba(255,51,68,.08)}
+    .facts{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
+    .fact{background:var(--panel);padding:25px}
+    .fact small{display:block;color:var(--muted);font-size:9px;text-transform:uppercase;letter-spacing:.17em;margin-bottom:10px}
+    .fact strong{font-size:16px;font-weight:700;word-break:break-word}
+    .fact strong em{font-style:normal;color:var(--lime)}
+    .fact strong em.highlight-red{color:var(--red)}
+    .fact a{color:inherit;transition:color .2s}
+    .fact a:hover{color:var(--red)}
+    
+    .interest-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .interest-card{min-height:220px;background:var(--panel);border:1px solid var(--line);padding:27px;display:flex;flex-direction:column;justify-content:space-between;transition:transform .25s,border-color .25s,background .25s}
+    .interest-card:hover{transform:translateY(-6px);border-color:var(--red);background:var(--panel2)}
+    .interest-icon{width:42px;height:42px;border:1px solid rgba(255,51,68,.5);border-radius:50%;display:grid;place-items:center;color:var(--red);font-size:19px}
+    .interest-card h3{font-family:var(--display);font-size:23px;letter-spacing:-.04em;margin:28px 0 8px}
+    .interest-card p{font-size:12px;line-height:1.6;color:var(--muted);margin:0}
+    .interest-index{font-size:9px;color:var(--lime);letter-spacing:.18em}
+    
+    .projects-grid{display:grid;grid-template-columns:1fr;gap:16px}
+    .project-card{position:relative;overflow:hidden;min-height:245px;padding:34px;background:linear-gradient(120deg,rgba(213,255,53,.09),transparent 55%),var(--panel);border:1px solid var(--line);display:grid;grid-template-columns:1fr auto;align-items:end;gap:24px;transition:border-color .35s,transform .35s,background .35s}
+    .project-card:hover{border-color:var(--lime);transform:translateY(-5px);background:linear-gradient(120deg,rgba(213,255,53,.13),transparent 62%),var(--panel)}
+    .project-card:after{content:"AI";position:absolute;right:8%;top:-48px;font-family:var(--display);font-size:230px;line-height:1;color:rgba(213,255,53,.055);pointer-events:none;transition:transform .6s}
+    .project-card:hover:after{transform:translateY(10px) rotate(-5deg)}
+    .project-number{display:block;color:var(--red);font-size:10px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:20px}
+    .project-card h3{position:relative;z-index:1;max-width:720px;font-family:var(--display);font-size:clamp(28px,4vw,48px);line-height:1.02;letter-spacing:-.045em;margin:0}
+    .project-card p{position:relative;z-index:1;color:var(--muted);font-size:13px;line-height:1.7;max-width:590px;margin:15px 0 0}
+    .project-status{position:relative;z-index:1;border:1px solid rgba(213,255,53,.4);color:var(--lime);padding:12px 15px;font-size:9px;letter-spacing:.16em;text-transform:uppercase;white-space:nowrap}
+    .project-mark{position:absolute;right:34px;top:28px;color:rgba(213,255,53,.75);font-size:20px;z-index:1}
+
+    .favorites{display:grid;grid-template-columns:1.2fr .8fr;gap:14px}
+    .favorite-main{background:var(--lime);color:#11150d;min-height:300px;padding:38px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
+    .favorite-main:after{content:"✳";position:absolute;right:-15px;bottom:-100px;font-size:300px;line-height:1;color:rgba(16,19,15,.08)}
+    .favorite-main small,.favorite-side small{font-size:10px;text-transform:uppercase;letter-spacing:.18em}
+    .favorite-main h3{font-family:var(--display);font-size:clamp(42px,6vw,76px);line-height:.9;letter-spacing:-.06em;margin:30px 0;position:relative;z-index:1}
+    .favorite-main p{font-size:12px;max-width:320px;line-height:1.6;margin:0;position:relative;z-index:1}
+    .favorite-side{display:grid;gap:14px}
+    .favorite-tile{background:var(--panel);border:1px solid var(--line);padding:27px;display:flex;flex-direction:column;justify-content:space-between}
+    .favorite-tile strong{font-family:var(--display);font-size:25px;line-height:1.05;letter-spacing:-.04em;margin-top:24px}
+    .favorite-tile small{color:var(--red)}
+    
+    .closing{padding:100px 0 70px}
+    .closing-panel{background:var(--panel);border:1px solid var(--line);padding:55px;display:flex;justify-content:space-between;align-items:center;gap:30px;position:relative;overflow:hidden}
+    .closing-panel:after{content:"MF";position:absolute;right:15%;top:-70px;font-family:var(--display);font-size:260px;color:rgba(255,51,68,.05);pointer-events:none}
+    .closing-panel h2{font-family:var(--display);font-size:clamp(42px,6vw,78px);letter-spacing:-.06em;line-height:.9;margin:15px 0 0;position:relative;z-index:1}
+    .closing-panel h2 span{color:var(--lime)}
+    .closing-panel h2 span.text-red{color:var(--red)}
+    
+    .footer{border-top:1px solid var(--line);padding:26px 0 34px;display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:10px;letter-spacing:.1em;text-transform:uppercase}
+    .footer b{color:var(--lime)}
+    
+    @keyframes float{0%,100%{transform:translateY(0) rotate(9deg)}50%{transform:translateY(-13px) rotate(6deg)}}
+    @keyframes portraitFloat{0%,100%{transform:translateY(0) rotateY(-1deg)}50%{transform:translateY(-10px) rotateY(1deg)}}
+    @keyframes portraitGlow{0%,100%{opacity:.55;transform:scale(.94)}50%{opacity:1;transform:scale(1.06)}}
+    @keyframes orbitPulse{0%,100%{transform:scale(1);opacity:.72}50%{transform:scale(1.035);opacity:1}}
+    @keyframes marquee{to{transform:translateX(-50%)}}
+    @keyframes reveal{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+    .reveal{animation:reveal .8s both}
+    .delay-1{animation-delay:.12s}
+    .delay-2{animation-delay:.24s}
+    .reveal-on-scroll{opacity:0;transform:translateY(24px);transition:opacity .75s ease,transform .75s cubic-bezier(.2,.7,.2,1)}
+    .reveal-on-scroll.is-visible{opacity:1;transform:translateY(0)}
+    
+    @media(max-width:900px){.container{width:min(100% - 40px,700px)}.hero{grid-template-columns:1fr;padding-top:65px;gap:10px}.hero-copy-wrap{position:relative;z-index:4}.hero-visual{height:500px;margin-top:-5px}.portrait-reveal{max-height:510px}.portrait-hint{top:auto;bottom:3%;right:3%;font-size:7px}.hero-orbit{left:14%;width:72%}.scroll-note{display:none}.about-grid{grid-template-columns:1fr}.interest-grid{grid-template-columns:repeat(2,1fr)}.project-card{grid-template-columns:1fr;align-items:start}.project-status{justify-self:start}.section-head{align-items:flex-start;flex-direction:column}.section-intro{max-width:600px}.closing-panel{padding:38px;align-items:flex-start;flex-direction:column}}
+    @media(max-width:600px){.container{width:calc(100% - 36px)}.topbar{height:72px}.nav{display:none;position:absolute;top:71px;left:0;right:0;padding:22px;background:#151a13;border:1px solid var(--line);flex-direction:column;align-items:stretch;gap:22px}.nav.open{display:flex}.nav a{font-size:12px}.nav-cta{text-align:center}.menu-toggle{display:block}.hero{min-height:0;padding:58px 0 25px}.hero h1{font-size:clamp(58px,17vw,88px);margin:23px 0}.hero-copy{font-size:14px}.hero-visual{height:410px;margin-top:4px}.portrait-reveal{max-height:420px}.portrait-hint{top:auto;bottom:2%;right:0;font-size:6px;white-space:normal;text-align:right;max-width:85%}.hero-orbit{width:88%;left:6%;top:6%}.visual-tag{left:0;bottom:9%;font-size:8px}.hero-meta{gap:7px}.meta-pill{font-size:9px;padding:9px 11px}.hero-actions{margin-top:25px}.btn{min-height:45px;padding:0 15px;font-size:9px}.ticker{font-size:12px;padding:14px 0}.ticker-track{gap:24px}.ticker span:after{padding-left:24px}section.content-section{padding:75px 0}.section-head{margin-bottom:30px}.section-title{font-size:48px}.about-card{padding:25px;min-height:220px}.about-card h3{font-size:25px}.facts{grid-template-columns:1fr 1fr}.fact{padding:18px 14px}.fact strong{font-size:13px}.interest-grid{grid-template-columns:1fr 1fr;gap:8px}.interest-card{padding:18px;min-height:190px}.interest-card h3{font-size:18px;margin-top:23px}.interest-card p{font-size:11px}.interest-icon{width:36px;height:36px}.favorites{grid-template-columns:1fr}.favorite-main{min-height:250px;padding:27px}.favorite-side{grid-template-columns:1fr 1fr}.project-card{padding:25px;min-height:260px}.project-card:after{right:0;font-size:170px}.project-status{font-size:8px}.favorite-tile{padding:20px;min-height:145px}.favorite-tile strong{font-size:19px}.closing{padding:65px 0 45px}.closing-panel{padding:27px}.footer{gap:14px;flex-direction:column;align-items:flex-start}.footer span:last-child{line-height:1.6}}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+    /* ==========================================================
+       CAMADA DE ANIMAÇÃO — versão inspirada em motion editorial
+       Mantém a estrutura e o conteúdo original do portfólio.
+       ========================================================== */
+    html { scroll-behavior: smooth; }
+    body { overflow-x: clip; }
+    .motion-progress {
+      position: fixed; inset: 0 auto auto 0; width: 100%; height: 3px;
+      z-index: 9999; pointer-events: none; transform-origin: left center;
+      transform: scaleX(0); background: linear-gradient(90deg,var(--red),var(--lime));
+      box-shadow: 0 0 12px rgba(213,255,53,.35);
+    }
+    .hero-copy-wrap .eyebrow,
+    .hero-copy-wrap h1,
+    .hero-copy-wrap .hero-copy,
+    .hero-copy-wrap .hero-meta,
+    .hero-copy-wrap .hero-actions {
+      animation: mfHeroIn .58s cubic-bezier(.16,1,.3,1) both;
+    }
+    .hero-copy-wrap .eyebrow { animation-delay:.08s }
+    .hero-copy-wrap h1 { animation-delay:.2s }
+    .hero-copy-wrap .hero-copy { animation-delay:.34s }
+    .hero-copy-wrap .hero-meta { animation-delay:.46s }
+    .hero-copy-wrap .hero-actions { animation-delay:.58s }
+    @keyframes mfHeroIn {
+      from { opacity:0; transform:translate3d(0,34px,0); filter:blur(8px) }
+      to { opacity:1; transform:translate3d(0,0,0); filter:blur(0) }
+    }
+    body.motion-ready .section-head .section-kicker,
+    body.motion-ready .section-head .section-title,
+    body.motion-ready .section-head .section-intro {
+      clip-path: inset(0 0 100% 0);
+      transform:translateY(24px);
+      transition:clip-path .46s cubic-bezier(.16,1,.3,1), transform .46s cubic-bezier(.16,1,.3,1);
+    }
+    .section-head.is-motion-visible .section-kicker,
+    .section-head.is-motion-visible .section-title,
+    .section-head.is-motion-visible .section-intro {
+      clip-path:inset(0 0 0 0); transform:translateY(0);
+    }
+    .motion-item {
+      opacity:0; transform:translate3d(0,38px,0) scale(.985);
+      filter:blur(5px);
+      transition:opacity .46s cubic-bezier(.16,1,.3,1),
+        transform .52s cubic-bezier(.16,1,.3,1), filter .42s ease;
+      transition-delay:var(--motion-delay,0ms);
+      will-change:opacity,transform;
+    }
+    .motion-item.is-motion-visible {
+      opacity:1; transform:translate3d(0,0,0) scale(1); filter:blur(0);
+    }
+    .about-card.motion-item { transform:translate3d(-35px,22px,0); }
+    .about-card.motion-item.is-motion-visible { transform:translate3d(0,0,0); }
+    .fact.motion-item { transform:translate3d(0,22px,0); }
+    .interest-card.motion-item { transform:translate3d(0,48px,0) rotateX(5deg); transform-origin:50% 100%; }
+    .interest-card.motion-item.is-motion-visible { transform:translate3d(0,0,0) rotateX(0); }
+    .project-card.motion-item { transform:translate3d(70px,0,0); }
+    .project-card.motion-item.is-motion-visible { transform:translate3d(0,0,0); }
+    .favorite-main.motion-item { transform:translate3d(-40px,0,0) scale(.97); }
+    .favorite-main.motion-item.is-motion-visible { transform:translate3d(0,0,0) scale(1); }
+    .favorite-tile.motion-item { transform:translate3d(35px,20px,0); }
+    .favorite-tile.motion-item.is-motion-visible { transform:translate3d(0,0,0); }
+    .content-section { position:relative; }
+    .content-section:before {
+      content:""; position:absolute; top:0; left:0; width:100%; height:1px;
+      background:linear-gradient(90deg,transparent,var(--red),var(--lime),transparent);
+      transform:scaleX(0); transform-origin:left; transition:transform 1.1s ease;
+    }
+    .content-section.is-motion-visible:before { transform:scaleX(1); }
+    .hero-visual { transform-origin:50% 55%; }
+    .hero-visual.motion-scrolling { will-change:transform,opacity; }
+    .ticker-track { animation-duration:22s; }
+    .btn, .nav a, .interest-card, .project-card { -webkit-tap-highlight-color:transparent; }
+    .btn:active { transform:translateY(1px) scale(.98); }
+    .closing-panel.motion-item { transform:translate3d(0,35px,0) scale(.985); }
+    .closing-panel.motion-item.is-motion-visible { transform:translate3d(0,0,0) scale(1); }
+    @media (max-width:700px) {
+      .motion-item { filter:none; }
+      .hero-visual.motion-scrolling { transform:none !important; opacity:1 !important; }
+      .ticker-track { animation-duration:28s; }
+    }
+    @media (prefers-reduced-motion:reduce) {
+      .motion-item,body.motion-ready .section-head .section-kicker,body.motion-ready .section-head .section-title,
+      body.motion-ready .section-head .section-intro { opacity:1!important; transform:none!important;
+        filter:none!important; clip-path:none!important; transition:none!important; }
+      .motion-progress { display:none; }
+    }
+
+  
+    /* Cinematic acceleration layer — visual-only overrides */
+    .hero-copy-wrap .eyebrow,.hero-copy-wrap h1,.hero-copy-wrap .hero-copy,
+    .hero-copy-wrap .hero-meta,.hero-copy-wrap .hero-actions {
+      animation-duration:.58s !important;
+      animation-timing-function:cubic-bezier(.16,1,.3,1) !important;
+    }
+    .hero-copy-wrap .eyebrow{animation-delay:0s !important}
+    .hero-copy-wrap h1{animation-delay:.07s !important}
+    .hero-copy-wrap .hero-copy{animation-delay:.14s !important}
+    .hero-copy-wrap .hero-meta{animation-delay:.2s !important}
+    .hero-copy-wrap .hero-actions{animation-delay:.26s !important}
+    body.motion-ready .section-head .section-kicker,
+    body.motion-ready .section-head .section-title,
+    body.motion-ready .section-head .section-intro {
+      transition-duration:.44s !important;
+      transition-timing-function:cubic-bezier(.16,1,.3,1) !important;
+      transform:translateY(16px);
+    }
+    .motion-item {
+      transform:translate3d(0,52px,0) scale(.975) rotateX(3deg) !important;
+      transform-origin:50% 100%;
+      filter:blur(7px) saturate(.82) !important;
+      transition:opacity .42s cubic-bezier(.16,1,.3,1),
+        transform .56s cubic-bezier(.16,1,.3,1),
+        filter .42s cubic-bezier(.16,1,.3,1) !important;
+      transition-delay:var(--motion-delay,0ms) !important;
+      backface-visibility:hidden;
+    }
+    .motion-item.is-motion-visible {
+      transform:translate3d(0,0,0) scale(1) rotateX(0) !important;
+      filter:blur(0) saturate(1) !important;
+    }
+    .section-head.is-motion-visible .section-kicker,
+    .section-head.is-motion-visible .section-title,
+    .section-head.is-motion-visible .section-intro {
+      transform:translateY(0) !important;
+    }
+    .content-section:before { transition-duration:.55s !important; }
+    .ticker-track { animation-duration:16s !important; }
+    .portrait-blurred { transition-duration:.28s,.28s,.42s !important; }
+    .portrait-sharp { transition-duration:.24s !important; }
+    .hero-orbit { animation-duration:4.8s !important; }
+    .hero-visual:after { animation-duration:3.6s !important; }
+    .motion-progress { transition:none !important; }
+    @media(max-width:700px) {
+      .motion-item { transform:translate3d(0,34px,0) scale(.985) !important; }
+      .ticker-track { animation-duration:20s !important; }
+    }
+    /* Correção: títulos e chamadas nunca ficam recortados/invisíveis.
+       A animação continua acontecendo por deslocamento e opacidade. */
+    body.motion-ready .section-head .section-kicker,
+    body.motion-ready .section-head .section-title,
+    body.motion-ready .section-head .section-intro {
+      clip-path: none !important;
+      opacity: 1 !important;
+      transform: translateY(16px);
+    }
+    body.motion-ready .section-head.is-motion-visible .section-kicker,
+    body.motion-ready .section-head.is-motion-visible .section-title,
+    body.motion-ready .section-head.is-motion-visible .section-intro {
+      clip-path: none !important;
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+    }
+    /* Conteúdo permanece legível mesmo se o navegador não disparar o observer. */
+    @media (prefers-reduced-motion:reduce) {
+      .motion-item { transform:none !important; }
+    }
+
+  
+    body.motion-ready .section-head .section-kicker,
+    body.motion-ready .section-head .section-title,
+    body.motion-ready .section-head .section-intro {
+      clip-path: none !important;
+    }
+  </style>
+</head>
+<body>
+<div class="site-shell">
+  <header class="container topbar">
+    <a class="brand" href="#inicio" aria-label="Miguel Franco, início"><img class="brand-logo" src="assets-miguel/logo-verde.png" alt="Logo MF verde"><span>MIGUEL FRANCO</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav">MENU</button>
+    <nav class="nav" id="mainNav" aria-label="Navegação principal">
+      <a href="#sobre">Sobre mim</a><a href="#interesses">Interesses</a><a href="#projetos">Projetos</a><a href="#preferencias">Preferências</a><a href="#contato" class="nav-cta">Contato ↗</a>
+    </nav>
+  </header>
+  <main>
+    <section class="container hero" id="inicio">
+      <div class="hero-copy-wrap reveal">
+        <div class="eyebrow">Perfil pessoal · Brasil</div>
+        <h1>MIGUEL <span>FRANCO</span></h1>
+        <p class="hero-copy">Estudante do curso técnico de IA na FECAP, interessado em tecnologia, inteligência artificial, programação e tudo que mistura criatividade com inovação.</p>
+        <div class="hero-meta">
+          <span class="meta-pill"><strong>15</strong> anos</span>
+          <span class="meta-pill">Estudante · <strong>FECAP</strong></span>
+          <span class="meta-pill">Técnico · <strong class="highlight-red">IA</strong></span>
+          <span class="meta-pill">Brasil</span>
+        </div>
+        <div class="hero-actions">
+          <a class="btn" href="#sobre">Conheça minha história <span aria-hidden="true">↘</span></a>
+          <a class="btn btn-red" href="mailto:miguelfrancofg33@gmail.com">Enviar E-mail</a>
+        </div>
+      </div>
+      <div class="hero-visual reveal delay-1" aria-label="Retrato interativo de Miguel Franco">
+        <div class="hero-orbit"></div>
+        <div class="portrait-reveal" id="portraitReveal" role="group" aria-label="Retrato interativo: passe o cursor para revelar a foto e os efeitos de programação" tabindex="0">
+          <!-- A foto borrada fica visível de fundo por padrão -->
+          <img class="portrait portrait-blurred" src="assets-miguel/miguel-portrait.png" alt="Miguel Franco usando um smoking azul-marinho">
+          <!-- A foto nítida é revelada pelo cursor usando a máscara circular -->
+          <img class="portrait portrait-sharp" src="assets-miguel/miguel-portrait.png" alt="" aria-hidden="true">
+          <canvas class="portrait-code-canvas" id="portraitCodeCanvas" aria-hidden="true"></canvas>
+        </div>
+        <div class="portrait-hint" id="portraitHint" aria-live="polite">Passe o cursor sobre a foto para revelar · toque para explorar</div>
+        <div class="visual-tag">MIGUEL FRANCO<small>TÉCNICO EM IA</small></div>
+      </div>
+      <div class="scroll-note">Role para descobrir</div>
+    </section>
+    <div class="ticker" aria-label="Tecnologia, criatividade, inovação e automobilismo">
+      <div class="ticker-track">
+        <span>TECNOLOGIA</span><span>CRIATIVIDADE</span><span>INTELIGÊNCIA ARTIFICIAL</span><span>PROGRAMAÇÃO</span><span>AUTOMOBILISMO</span><span>TECNOLOGIA</span><span>CRIATIVIDADE</span><span>INTELIGÊNCIA ARTIFICIAL</span><span>PROGRAMAÇÃO</span><span>AUTOMOBILISMO</span>
+      </div>
+    </div>
+    <section class="container content-section" id="sobre">
+      <div class="section-head">
+        <div><div class="section-kicker">01 / Quem sou</div><h2 class="section-title">UM POUCO <span>SOBRE MIM</span></h2></div>
+        <p class="section-intro">Um espaço para reunir o que faz parte da minha identidade: estudos, curiosidades, interesses e ideias para o futuro.</p>
+      </div>
+      <div class="about-grid">
+        <article class="about-card">
+          <h3>Curioso por natureza.</h3>
+          <p>Sou Miguel Franco, tenho 15 anos e estudo no curso técnico de Inteligência Artificial na FECAP. Gosto de explorar o universo da tecnologia e descobrir como ideias podem se transformar em projetos, experiências e soluções.</p>
+          <span class="number">01</span>
+        </article>
+        <div class="facts">
+          <div class="fact"><small>Nome</small><strong>Miguel <em>Franco</em></strong></div>
+          <div class="fact"><small>Curso Técnico</small><strong><em class="highlight-red">IA</em> (Inteligência Artificial)</strong></div>
+          <div class="fact"><small>Instituição</small><strong><em>FECAP</em></strong></div>
+          <div class="fact"><small>Telefone</small><strong><a href="tel:+5511997111805">+55 11 99711-1805</a></strong></div>
+          <div class="fact" style="grid-column: span 2;"><small>E-mail</small><strong><a href="mailto:miguelfrancofg33@gmail.com">miguelfrancofg33@gmail.com</a></strong></div>
+        </div>
+      </div>
+    </section>
+    <section class="container content-section" id="interesses">
+      <div class="section-head">
+        <div><div class="section-kicker">02 / O que me inspira</div><h2 class="section-title">MEUS <span>INTERESSES</span></h2></div>
+        <p class="section-intro">Temas que despertam minha curiosidade e que gosto de acompanhar, estudar e explorar.</p>
+      </div>
+      <div class="interest-grid">
+        <article class="interest-card"><span class="interest-index">01 — CRIAR</span><div><div class="interest-icon">✳</div><h3>Inteligência artificial</h3><p>Descobrir possibilidades e aplicações da IA no curso técnico e além.</p></div></article>
+        <article class="interest-card"><span class="interest-index">02 — CONSTRUIR</span><div><div class="interest-icon">⌘</div><h3>Programação</h3><p>Entender a lógica por trás de ideias digitais.</p></div></article>
+        <article class="interest-card"><span class="interest-index">03 — EXPLORAR</span><div><div class="interest-icon">◈</div><h3>Tecnologia</h3><p>Acompanhar novidades e soluções inovadoras.</p></div></article>
+        <article class="interest-card"><span class="interest-index">04 — DESENVOLVER</span><div><div class="interest-icon">⌘</div><h3>Desenvolvimento web</h3><p>Criar sites e experiências para a internet.</p></div></article>
+        <article class="interest-card"><span class="interest-index">05 — JOGAR</span><div><div class="interest-icon">△</div><h3>Jogos</h3><p>Interesse por experiências interativas e games.</p></div></article>
+        <article class="interest-card"><span class="interest-index">06 — ACELERAR</span><div><div class="interest-icon">◉</div><h3>Automobilismo</h3><p>Velocidade, competição e engenharia.</p></div></article>
+      </div>
+    </section>
+    <section class="container content-section" id="projetos">
+      <div class="section-head">
+        <div><div class="section-kicker">03 / Ideias em prática</div><h2 class="section-title">MEUS <span>PROJETOS</span></h2></div>
+        <p class="section-intro">Projetos que conectam tecnologia, inteligência artificial e soluções para situações do dia a dia.</p>
+      </div>
+      <div class="projects-grid">
+        <article class="project-card reveal-on-scroll">
+          <div>
+            <span class="project-number">Projeto 01 · Inteligência artificial</span>
+            <h3>Sensor de presença inteligente com detecção por IA</h3>
+            <p>Uma proposta que une sensores e inteligência artificial para tornar a identificação de presença mais inteligente.</p>
+          </div>
+          <span class="project-status">Tecnologia · IA</span>
+          <span class="project-mark" aria-hidden="true">✳</span>
+        </article>
+      </div>
+    </section>
+    <section class="container content-section" id="preferencias">
+      <div class="section-head">
+        <div><div class="section-kicker">04 / Fora da tela</div><h2 class="section-title">MINHAS <span>PREFERÊNCIAS</span></h2></div>
+        <p class="section-intro">Alguns detalhes pessoais que deixam este perfil com a minha cara.</p>
+      </div>
+      <div class="favorites">
+        <article class="favorite-main"><small>Interesse em destaque</small><h3>AUTOMOBILISMO.</h3><p>Velocidade, tecnologia e engenharia em constante movimento.</p></article>
+        <div class="favorite-side">
+          <article class="favorite-tile"><small>Meu ambiente</small><strong>Aprender e experimentar</strong></article>
+          <article class="favorite-tile"><small>Minha curiosidade</small><strong>Como a tecnologia funciona</strong></article>
+        </div>
+      </div>
+    </section>
+    <section class="container closing" id="contato">
+      <div class="closing-panel">
+        <div>
+          <div class="section-kicker">Miguel Franco · 2026</div>
+          <h2>IDEIAS EM <span class="text-red">MOVIMENTO.</span></h2>
+        </div>
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <a class="btn btn-red" href="tel:+5511997111805">Ligar no Telefone</a>
+          <a class="btn btn-ghost" href="#inicio">Voltar ao início ↑</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="container footer">
+    <span>© 2026 <b>Miguel Franco</b></span>
+    <span>Técnico em IA · miguelfrancofg33@gmail.com</span>
+  </footer>
+</div>
+<script>
+  const toggle=document.getElementById('menuToggle');
+  const nav=document.getElementById('mainNav');
+  toggle.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));toggle.textContent=open?'FECHAR':'MENU';});
+  nav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.textContent='MENU';}));
+
+  // Animação discreta de entrada ao chegar às seções
+  const revealItems=document.querySelectorAll('.reveal-on-scroll');
+  if('IntersectionObserver' in window){
+    const revealObserver=new IntersectionObserver((entries,observer)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target);}
+      });
+    },{threshold:.16});
+    revealItems.forEach(item=>revealObserver.observe(item));
+  }else{revealItems.forEach(item=>item.classList.add('is-visible'));}
+
+
+  // Retrato interativo com matriz de código em tons de verde e vermelho
+  const portraitReveal=document.getElementById('portraitReveal');
+  const portraitHint=document.getElementById('portraitHint');
+  const codeCanvas=document.getElementById('portraitCodeCanvas');
+  if(portraitReveal&&codeCanvas){
+    const ctx=codeCanvas.getContext('2d');
+    let pointer={x:-100,y:-100,active:false};
+    let trails=[];
+    let frame=0;
+    const snippets=['const future = build();','0101 1010','<AI_MODEL />','function train()','npm run dev','if (idea) innovate();','{ course: "IA" }','// neural network','while (curious) learn();','let creativity = true;'];
+    const colors=['#d5ff35','#ff3344','#ff4d5e'];
+    
+    const resizeCanvas=()=>{
+      const rect=portraitReveal.getBoundingClientRect();
+      const dpr=Math.min(window.devicePixelRatio||1,2);
+      codeCanvas.width=Math.round(rect.width*dpr);
+      codeCanvas.height=Math.round(rect.height*dpr);
+      ctx.setTransform(dpr,0,0,dpr,0,0);
+    };
+    resizeCanvas();
+    window.addEventListener('resize',resizeCanvas);
+    
+    const updatePointer=(clientX,clientY)=>{
+      const rect=portraitReveal.getBoundingClientRect();
+      pointer.x=clientX-rect.left;
+      pointer.y=clientY-rect.top;
+      pointer.active=true;
+      portraitReveal.style.setProperty('--reveal-x',pointer.x+'px');
+      portraitReveal.style.setProperty('--reveal-y',pointer.y+'px');
+      portraitReveal.classList.add('is-active');
+      if(portraitHint)portraitHint.textContent='Imagem revelada · sistema criativo ativo';
+      if(trails.length<50){
+        trails.push({
+          x:pointer.x+(Math.random()-.5)*46,
+          y:pointer.y+(Math.random()-.5)*46,
+          text:snippets[Math.floor(Math.random()*snippets.length)],
+          color:colors[Math.floor(Math.random()*colors.length)],
+          life:1,
+          vy:-.2-Math.random()*.4,
+          drift:(Math.random()-.5)*.45
+        });
+      }
+    };
+    const clearPointer=()=>{
+      pointer.active=false;
+      portraitReveal.classList.remove('is-active');
+      if(portraitHint)portraitHint.textContent='Passe o cursor sobre a foto para revelar · toque para explorar';
+    };
+    portraitReveal.addEventListener('pointermove',event=>updatePointer(event.clientX,event.clientY));
+    portraitReveal.addEventListener('pointerleave',event=>{if(event.pointerType!=='touch')clearPointer();});
+    portraitReveal.addEventListener('pointerdown',event=>{if(event.pointerType==='touch')updatePointer(event.clientX,event.clientY);});
+    portraitReveal.addEventListener('keydown',event=>{
+      if(event.key==='Escape')clearPointer();
+      if(event.key==='Enter'||event.key===' '){
+        event.preventDefault();
+        if(pointer.active)clearPointer();
+        else updatePointer(portraitReveal.getBoundingClientRect().left+portraitReveal.clientWidth/2,portraitReveal.getBoundingClientRect().top+portraitReveal.clientHeight/2);
+      }
+    });
+    const animateCode=()=>{
+      const rect=portraitReveal.getBoundingClientRect();
+      ctx.clearRect(0,0,rect.width,rect.height);
+      frame++;
+      if(pointer.active&&frame%4===0&&trails.length<55){
+        trails.push({
+          x:pointer.x+(Math.random()-.5)*90,
+          y:pointer.y+(Math.random()-.5)*90,
+          text:snippets[Math.floor(Math.random()*snippets.length)],
+          color:colors[Math.floor(Math.random()*colors.length)],
+          life:1,
+          vy:-.25-Math.random()*.5,
+          drift:(Math.random()-.5)*.6
+        });
+      }
+      trails=trails.filter(item=>item.life>0);
+      trails.forEach(item=>{
+        item.y+=item.vy;item.x+=item.drift;item.life-=.013;
+        ctx.globalAlpha=Math.max(0,item.life)*.9;
+        ctx.font='10px monospace';
+        ctx.fillStyle=item.color;
+        ctx.shadowColor=item.color;ctx.shadowBlur=9;
+        ctx.fillText(item.text,item.x,item.y);
+      });
+      ctx.globalAlpha=1;ctx.shadowBlur=0;
+      if(pointer.active){
+        ctx.beginPath();ctx.arc(pointer.x,pointer.y,146,0,Math.PI*2);
+        ctx.strokeStyle='rgba(255,51,68,.48)';ctx.lineWidth=1;ctx.setLineDash([3,6]);ctx.stroke();ctx.setLineDash([]);
+        ctx.beginPath();ctx.arc(pointer.x,pointer.y,5,0,Math.PI*2);
+        ctx.fillStyle='#ff3344';ctx.shadowColor='#ff3344';ctx.shadowBlur=14;ctx.fill();ctx.shadowBlur=0;
+      }
+      requestAnimationFrame(animateCode);
+    };
+    animateCode();
+  }
+</script>
+
+<script>
+/* Motion system aditivo: não substitui nenhum script ou interação existente. */
+(() => {
+  document.body.classList.add('motion-ready');
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const progress = document.createElement('div');
+  progress.className = 'motion-progress';
+  document.body.appendChild(progress);
+
+  const sectionTargets = document.querySelectorAll('.content-section, .closing');
+  const revealTargets = document.querySelectorAll(
+    '.about-card, .fact, .interest-card, .project-card, .favorite-main, .favorite-tile, .closing-panel'
+  );
+  revealTargets.forEach((el, index) => {
+    el.classList.add('motion-item');
+    const within = el.parentElement ? [...el.parentElement.children].indexOf(el) : index;
+    el.style.setProperty('--motion-delay', `${Math.min(within * 45, 180)}ms`);
+  });
+
+  if (!reduceMotion && 'IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-motion-visible');
+        obs.unobserve(entry.target);
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -7% 0px' });
+
+    [...sectionTargets, ...revealTargets, ...document.querySelectorAll('.section-head')]
+      .forEach(el => observer.observe(el));
+  } else {
+    [...sectionTargets, ...revealTargets, ...document.querySelectorAll('.section-head')]
+      .forEach(el => el.classList.add('is-motion-visible'));
+  }
+
+  const hero = document.querySelector('.hero-visual');
+  let ticking = false;
+  const updateScrollMotion = () => {
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    const amount = max > 0 ? window.scrollY / max : 0;
+    progress.style.transform = `scaleX(${Math.max(0, Math.min(1, amount))})`;
+
+    if (hero && !reduceMotion && window.innerWidth > 700) {
+      const rect = hero.getBoundingClientRect();
+      const travel = Math.max(0, Math.min(1, (window.innerHeight - rect.top) / (window.innerHeight + rect.height)));
+      const scale = 1 - travel * 0.055;
+      const shift = travel * -15;
+      hero.style.transform = `translate3d(0,${shift}px,0) scale(${scale})`;
+      hero.style.opacity = String(1 - travel * .08);
+    }
+    ticking = false;
+  };
+  window.addEventListener('scroll', () => {
+    if (!ticking) { window.requestAnimationFrame(updateScrollMotion); ticking = true; }
+  }, { passive:true });
+  window.addEventListener('resize', updateScrollMotion, { passive:true });
+  updateScrollMotion();
+
+  // Foco por teclado revela o conteúdo imediatamente.
+  document.addEventListener('focusin', event => {
+    const target = event.target.closest('.motion-item, .section-head');
+    if (target) target.classList.add('is-motion-visible');
+  });
+})();
+</script>
+
+</body>
+</html>
